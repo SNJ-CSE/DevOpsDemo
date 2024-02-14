@@ -4,7 +4,7 @@ pipeline{
 		stage("build")
 		{
 		  steps{echo "Testing the pipiline"
-			bat java -version
+			bat "java -version"
 			}
 		}
 	      }
