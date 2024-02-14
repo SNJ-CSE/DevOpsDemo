@@ -16,7 +16,7 @@ pipeline{
 		}
 		stage("Print")
 		{
-		  steps{echo "Print stage"
+		  steps{echo "Testing Print stage"
 			bat "java -version"
 			bat "time"
 			}
