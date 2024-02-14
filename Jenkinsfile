@@ -7,6 +7,13 @@ pipeline{
 			bat "java -version"
 			}
 		}
+		stage("Veirfy")
+		{
+		  steps{echo "Verify the pipiline"
+			bat "mvn -version"
+			bat "date"
+			}
+		}
 	      }
 
 }
