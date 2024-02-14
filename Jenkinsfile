@@ -14,6 +14,13 @@ pipeline{
 			bat "date"
 			}
 		}
+		stage("Print")
+		{
+		  steps{echo "Print stage"
+			bat "java -version"
+			bat "time"
+			}
+		}
 	      }
 
 }
