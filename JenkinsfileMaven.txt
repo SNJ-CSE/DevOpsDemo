@@ -1,0 +1,49 @@
+pipeline{
+	agent any	
+	stages{
+		stage("Clean")
+		{
+		  steps{echo "clean the project"
+			bat "mvn -version"
+			bat "mvn clean"
+			}
+		}
+		stage("Validate")
+		{
+		  steps{echo "validate the project"
+			bat "mvn validate"
+			}
+		}
+		stage("Compile")
+		{
+		  steps{echo "compile the project"
+			bat "mvn compile"
+			}
+		}
+		stage("Test")
+		{
+		  steps{echo "test the project"
+			bat "mvn test -DskipTests"
+			}
+		}	
+		stage("Package")
+		{
+		  steps{echo "package the project"
+			bat "mvn pacakge -DskipTests"
+			}
+		}
+		stage("Verify")
+		{
+		  steps{echo "Verify the project"
+			bat "mvn verify -DskipTests"
+			}
+		}
+		stage("Install")
+		{
+		  steps{echo "Install the project"
+			bat "mvn install -DskipTests"
+			}
+		}
+	      }
+
+}
