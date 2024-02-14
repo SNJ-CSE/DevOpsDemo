@@ -11,16 +11,9 @@ pipeline{
 		{
 		  steps{echo "Verify the pipiline"
 			bat "mvn -version"
-			bat "date"
 			}
 		}
-		stage("Print")
-		{
-		  steps{echo "Testing Print stage"
-			bat "java -version"
-			bat "time"
-			}
-		}
+		
 	      }
 
 }
